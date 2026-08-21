@@ -84,6 +84,7 @@
     padding:0 4px;border-radius:4px;
   }
   .sub{margin:18px auto 0;max-width:560px;font-size:clamp(15px,3.6vw,18px);color:var(--ink-soft);font-weight:500}
+  .mo{display:none}
   .baby{font-size:46px;margin-bottom:6px}
 
   /* ===== Big stat card ===== */
@@ -189,6 +190,7 @@
     .flow{flex-direction:column;gap:6px}
     .flow .node{width:100%;min-width:0}
     .flow .arrow{transform:rotate(90deg)}
+    .mo{display:inline}
   }
 </style>
 </head>
@@ -209,7 +211,7 @@
       <div class="baby">👶🍼</div>
       <span class="hello">우리 아이 첫 목돈 준비 🎈</span>
       <h1 class="title">자녀의 아동수당<br /><span class="hl">달러로 바꾸세요!</span></h1>
-      <p class="sub">매달 받는 아동수당, 그냥 쓰기엔 아깝잖아요.<br />달러로 차곡차곡 모아 아이의 수당을 목돈으로 돌려주세요.</p>
+      <p class="sub">매달 받는 아동수당, 그냥 쓰기엔 아깝잖아요.<br />달러로 차곡차곡 모아 아이의 수당을<br class="mo" /> 목돈으로 돌려주세요.</p>
 
       <div class="stat-card">
         <div class="flow">
@@ -242,15 +244,10 @@
       <div class="sec-head">
         <div class="kicker">WHY DOLLAR</div>
         <h2>왜 달러로 모아야 할까요?</h2>
-        <p>단순 저축이 아닌, 똑똑하게 모으는 7가지 이유</p>
+        <p>단순 저축이 아닌, 똑똑하게 모으는 6가지 이유</p>
       </div>
 
       <div class="cards">
-        <div class="card">
-          <div class="ic c1">💱</div>
-          <h3>환전 비용 0원</h3>
-          <p>원화를 달러로 모을 때 <b>환전 비용이 들지 않아요.</b><br />부담 없이 시작할 수 있어요.</p>
-        </div>
         <div class="card">
           <div class="ic c2">🪙</div>
           <h3>초저가 환전 수수료</h3>
@@ -264,7 +261,7 @@
         <div class="card">
           <div class="ic c4">🧾</div>
           <h3>세금 걱정 없는 비과세</h3>
-          <p><b>비과세 상품</b>이라 이자에도, <b>환차익에도 세금이 없어요.</b><br />모은 만큼 온전히 내 아이 것.</p>
+          <p class="fix2"><b>비과세 상품</b>이라 이자에도,<br /><b>환차익에도 세금이 없어요.</b> 모은 만큼 온전히 내 아이 것.</p>
         </div>
         <div class="card">
           <div class="ic c5">🎁</div>
