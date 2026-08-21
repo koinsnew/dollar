@@ -99,7 +99,7 @@
   .flow .lbl{font-size:13px;color:var(--ink-soft);font-weight:500;margin-top:4px}
   .flow .arrow{font-size:26px;color:var(--mint);font-weight:900}
   .flow .node.result .num{color:var(--coral)}
-  .stat-foot{margin-top:16px;font-size:14px;color:var(--ink-soft);text-align:center}
+  .stat-foot{margin-top:16px;font-size:clamp(11px,3.3vw,14px);color:var(--ink-soft);text-align:center;white-space:nowrap}
   .stat-foot b{color:var(--ink)}
 
   .cta-big{
@@ -135,6 +135,7 @@
   .ic.c4{background:#ffeef4}.ic.c5{background:#efeaff}.ic.c6{background:#fff0e8}.ic.c7{background:#e6f6ff}
   .card h3{font-size:17px;font-weight:900;color:var(--ink);margin-bottom:6px}
   .card p{font-size:14px;color:var(--ink-soft);line-height:1.65;word-break:keep-all}
+  .card p.fix2{white-space:nowrap;font-size:clamp(11px,3.3vw,14px);line-height:1.9}
   .card p b{color:var(--sky-dark)}
 
   /* highlight strip */
@@ -144,7 +145,8 @@
     border:2px dashed var(--pink);
   }
   .strip b{color:var(--coral)}
-  .strip .big{font-family:'Jua',sans-serif;font-size:clamp(20px,5vw,26px);color:var(--ink);display:block}
+  .strip .big{font-family:'Jua',sans-serif;font-size:clamp(15px,4.4vw,26px);color:var(--ink);display:block;white-space:nowrap}
+  .strip-sub{display:block;margin-top:8px;font-size:clamp(12px,3.5vw,15px);white-space:nowrap;line-height:1.7}
 
   /* ===== Form ===== */
   .form-sec{background:linear-gradient(180deg,#f0f8ff,#fff9ef)}
@@ -184,6 +186,8 @@
 
   @media (max-width:560px){
     .cards{grid-template-columns:1fr}
+    .flow{flex-direction:column;gap:6px}
+    .flow .node{width:100%;min-width:0}
     .flow .arrow{transform:rotate(90deg)}
   }
 </style>
@@ -250,12 +254,12 @@
         <div class="card">
           <div class="ic c2">🪙</div>
           <h3>초저가 환전 수수료</h3>
-          <p>나중에 목돈을 원화로 바꿀 때 수수료가 <b>1달러당 단 2원.</b><br />7,000달러(약 1천만원)를 환전해도 <b>1만 4천원</b>이면 끝!</p>
+          <p class="fix2">나중에 목돈을 원화로 바꿀 때 수수료가 <b>1달러당 단 2원.</b><br />7,000달러(약 1천만원)를 환전해도 <b>1만 4천원</b>이면 끝!</p>
         </div>
         <div class="card">
           <div class="ic c3">📈</div>
           <h3>환차익 기대</h3>
-          <p>달러 가치가 오르면 <b>환차익</b>까지 함께 얻을 수 있어요.<br />저축과 투자를 한 번에.</p>
+          <p class="fix2">달러 가치가 오르면 <b>환차익</b>까지 함께 얻을 수 있어요.<br />저축과 투자를 한 번에.</p>
         </div>
         <div class="card">
           <div class="ic c4">🧾</div>
@@ -281,7 +285,7 @@
 
       <div class="strip">
         <span class="big">아동수당 10만원 = 아이의 1천만원 시드머니 🌱</span>
-        환전비용 없이, <b>비과세로</b>, 예금자보호까지 — 안 할 이유가 없어요!
+        <span class="strip-sub">환전비용 없이, <b>비과세로</b>, 예금자보호까지<br />안 할 이유가 없어요!</span>
       </div>
     </div>
   </section>
@@ -298,7 +302,7 @@
       <div class="form-box">
         <div class="lead">
           <span class="mgr" id="mgrBadge" style="display:none"></span>
-          <div style="font-weight:700;color:var(--ink)">아래 정보를 남겨주세요 (30초면 끝나요!)</div>
+          <div style="font-weight:700;color:var(--ink);white-space:nowrap;font-size:clamp(13px,3.9vw,16px)">아래 정보를 남겨주세요 (30초면 끝나요!)</div>
         </div>
 
         <form id="applyForm" autocomplete="on">
