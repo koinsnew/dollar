@@ -301,7 +301,6 @@
 
       <div class="form-box">
         <div class="lead">
-          <span class="mgr" id="mgrBadge" style="display:none"></span>
           <div style="font-weight:700;color:var(--ink);white-space:nowrap;font-size:clamp(13px,3.9vw,16px)">아래 정보를 남겨주세요 (30초면 끝나요!)</div>
         </div>
 
@@ -361,9 +360,7 @@
   window.__setManager = function (data) {
     const name = (data && data.name) ? data.name : DEFAULT_MANAGER;
     window.__manager = name;
-    const badge = document.getElementById("mgrBadge");
-    badge.textContent = "담당자 : " + name;
-    badge.style.display = "inline-block";
+    // 담당자 이름은 화면에 표시하지 않고, 신청 시 시트에만 기록됩니다.
   };
 
   (function loadManager(){
