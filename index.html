@@ -163,8 +163,9 @@
   }
   input:focus,select:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 3px rgba(74,163,255,.15)}
   .age-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .consent{display:flex;align-items:flex-start;gap:9px;margin-top:18px;font-size:13px;color:var(--ink-soft)}
-  .consent input{width:auto;margin-top:3px}
+  .consent{display:flex;align-items:center;gap:9px;margin-top:18px;font-size:12px;color:var(--ink-soft)}
+  .consent input{width:auto;flex:none}
+  .consent span{white-space:nowrap}
   .submit{
     width:100%;margin-top:20px;background:linear-gradient(135deg,var(--sky),var(--sky-dark));
     color:#fff;border:none;border-radius:16px;padding:16px;font-family:'Jua',sans-serif;
@@ -204,7 +205,7 @@
       <div class="baby">👶🍼</div>
       <span class="hello">우리 아이 첫 목돈 준비 🎈</span>
       <h1 class="title">자녀의 아동수당<br /><span class="hl">달러로 바꾸세요!</span></h1>
-      <p class="sub">매달 받는 아동수당, 그냥 쓰기엔 아깝잖아요.<br />달러로 차곡차곡 모아 아이의 든든한 미래를 선물하세요.</p>
+      <p class="sub">매달 받는 아동수당, 그냥 쓰기엔 아깝잖아요.<br />달러로 차곡차곡 모아 아이의 수당을 목돈으로 돌려주세요.</p>
 
       <div class="stat-card">
         <div class="flow">
@@ -244,17 +245,17 @@
         <div class="card">
           <div class="ic c1">💱</div>
           <h3>환전 비용 0원</h3>
-          <p>원화를 달러로 모을 때 <b>환전 비용이 들지 않아요.</b> 부담 없이 시작할 수 있어요.</p>
+          <p>원화를 달러로 모을 때 <b>환전 비용이 들지 않아요.</b><br />부담 없이 시작할 수 있어요.</p>
         </div>
         <div class="card">
           <div class="ic c2">🪙</div>
           <h3>초저가 환전 수수료</h3>
-          <p>나중에 목돈을 원화로 바꿀 때 수수료가 <b>1달러당 단 2원.</b> 7,000달러(약 1천만원)를 환전해도 <b>1만 4천원</b>이면 끝!</p>
+          <p>나중에 목돈을 원화로 바꿀 때 수수료가 <b>1달러당 단 2원.</b><br />7,000달러(약 1천만원)를 환전해도 <b>1만 4천원</b>이면 끝!</p>
         </div>
         <div class="card">
           <div class="ic c3">📈</div>
           <h3>환차익 기대</h3>
-          <p>달러 가치가 오르면 <b>환차익</b>까지 함께 얻을 수 있어요. 저축과 투자를 한 번에.</p>
+          <p>달러 가치가 오르면 <b>환차익</b>까지 함께 얻을 수 있어요.<br />저축과 투자를 한 번에.</p>
         </div>
         <div class="card">
           <div class="ic c4">🧾</div>
@@ -264,17 +265,17 @@
         <div class="card">
           <div class="ic c5">🎁</div>
           <h3>자녀에게 증여 가능</h3>
-          <p>원하면 <b>자녀에게 그대로 물려줄 수 있어요.</b> 아이 이름의 첫 자산이 됩니다.</p>
+          <p>원하면 <b>자녀에게 그대로 물려줄 수 있어요.</b><br />아이 이름의 첫 자산이 됩니다.</p>
         </div>
         <div class="card">
           <div class="ic c6">✅</div>
           <h3>받는 금액 확정</h3>
-          <p>시작하는 순간 <b>받게 될 금액이 확정</b>돼요. 불안한 마음 없이 계획할 수 있어요.</p>
+          <p>시작하는 순간 <b>받게 될 금액이 확정</b>돼요.<br />불안한 마음 없이 계획할 수 있어요.</p>
         </div>
         <div class="card">
           <div class="ic c7">🛡️</div>
           <h3>예금자보호 1억까지</h3>
-          <p><b>예금자보호법에 따라 1억원까지 보호.</b> 소중한 아이의 돈, 안전하게 지켜집니다.</p>
+          <p><b>예금자보호법에 따라 1억원까지 보호.</b><br />소중한 아이의 돈, 안전하게 지켜집니다.</p>
         </div>
       </div>
 
@@ -318,7 +319,7 @@
 
           <label class="consent">
             <input type="checkbox" id="agree" required />
-            <span>개인정보 수집·이용에 동의합니다. (수집: 이름, 연락처, 자녀정보, 지역 / 목적: 상담 안내)</span>
+            <span>개인정보 수집·이용에 동의합니다. (상담 안내 목적)</span>
           </label>
 
           <button type="submit" class="submit" id="submitBtn">상담 신청하기 🚀</button>
@@ -342,7 +343,7 @@
      ⚙️ 설정 — 아래 두 값만 본인 것으로 바꿔주세요
      =================================================================== */
   // 1) Google Apps Script 웹앱 배포 URL (code.gs 배포 후 받은 주소)
-  const SCRIPT_URL = "https://script.google.com/macros/s/XXXXXXXXXXXXXXXXXXXXXXXX/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxXZj6pXHbEGZ2MlUB0tPzusa5fzpxsaXzyEPXCmjrzZblst9eSI8F-PYjOgS11VDZp/exec";
   // 2) ref 코드가 없거나 매핑에 없을 때 기본 담당자
   const DEFAULT_MANAGER = "옥영훈";
   /* =================================================================== */
