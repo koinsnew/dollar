@@ -190,11 +190,14 @@
 
   /* ===== Footer ===== */
   footer{background:#39435c;color:#cfd6e6;text-align:center;padding:34px 20px;font-size:13px}
-  footer .fbrand{font-family:'Jua',sans-serif;font-size:18px;color:#fff;margin-bottom:10px}
-  footer .fauthor{color:#e8ecf6;font-size:14px;font-weight:700}
+  footer .fbrand{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+  .fcoin{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--yellow),var(--coral));color:#fff;font-size:16px;font-weight:700;box-shadow:0 3px 8px rgba(255,150,80,.4)}
+  footer .fauthor{color:#e8ecf6;font-size:clamp(9px,2.7vw,14px);font-weight:700;white-space:nowrap}
   footer .fauthor2{color:#e8ecf6;font-size:clamp(9px,2.6vw,13px);font-weight:700;margin-top:7px;white-space:nowrap}
   footer .fauthor3{color:#b9c1d4;font-size:12px;margin-top:6px;line-height:1.6;max-width:680px;margin-left:auto;margin-right:auto;word-break:keep-all}
   footer .disc{color:#8b95ad;font-size:12px;margin-top:16px;line-height:1.75;max-width:680px;margin-left:auto;margin-right:auto;text-align:left;word-break:keep-all;border-top:1px solid #4a5268;padding-top:14px}
+  footer .disc-h{color:#dce1ec;font-weight:700;font-size:12.5px;margin:12px 0 4px}
+  footer .disc-h:first-child{margin-top:0}
 
   @media (max-width:560px){
     .cards{grid-template-columns:1fr}
@@ -210,7 +213,7 @@
   <!-- TOP BAR -->
   <div class="topbar">
     <div class="wrap">
-      <a href="#top" class="brand"><span class="coin">$</span> 달러모으기</a>
+      <a href="#top" class="brand"><span class="coin">$</span></a>
       <a href="#apply" class="top-cta">무료 자료 신청</a>
     </div>
   </div>
@@ -222,7 +225,7 @@
       <div class="baby">👶🍼</div>
       <span class="hello">우리 아이 첫 목돈 준비 🎈</span>
       <h1 class="title">자녀의 아동수당<br /><span class="hl">달러로 바꾸세요!</span></h1>
-      <p class="sub">매달 받는 아동수당, 그냥 쓰기엔 아깝잖아요.<br />달러로 차곡차곡 모아 아이의 수당을<br class="mo" /> 목돈으로 돌려주세요.</p>
+      <p class="sub">매달 받는 아동수당, 그냥 쓰기엔 아깝잖아요.<br />달러로 아이의 수당을 돌려주세요.</p>
 
       <div class="stat-card">
         <div class="flow">
@@ -241,9 +244,7 @@
             <div class="lbl">함께 준비해요 🎉</div>
           </div>
         </div>
-        <div class="stat-foot">예시) 매달 <b>10만원</b>씩 꾸준히 모으면, 아이 초등학교 입학 무렵<br /><b>약 1천만원</b> 규모의 목돈 마련을 기대해 볼 수 있어요 ✨</div>
       </div>
-      <div class="risk-note">※ 위 예시는 이해를 돕기 위한 가정이며, 장래 수익을 보장하지 않습니다. 달러(외화) 기준 상품은 환율 변동에 따라 원금손실이 발생할 수 있고, 실제 금액은 환율·상품 조건에 따라 달라집니다.</div>
 
       <a href="#apply" class="cta-big">무료 자료 받기</a>
       <span class="cta-note">상담은 무료, 가입은 자유로운 선택이에요 😊</span>
@@ -263,7 +264,7 @@
         <div class="card">
           <div class="ic c2">🪙</div>
           <h3>환전 수수료는 최대한 적게</h3>
-          <p class="fix2">달러로 저축하거나<br />나중에 목돈을 원화로 바꿀 때 <b>환전 수수료가 비쌉니다.</b><br />최대한 환전 수수료가 적은 상품을 고르세요.</p>
+          <p class="fix2">달러로 바꾸거나<br />나중에 목돈을 원화로 바꿀 때 <b>환전 수수료가 발생합니다.</b><br />최대한 환전 수수료가 적은 상품을 고르세요.</p>
         </div>
         <div class="card">
           <div class="ic c3">📈</div>
@@ -272,7 +273,7 @@
         </div>
         <div class="card">
           <div class="ic c4">🧾</div>
-          <h3>배보다 배꼽이 큰 세금 없이</h3>
+          <h3>큰 세금 없이</h3>
           <p>일정 요건(예: 10년 이상 유지 등)을<br /><b>충족하면 비과세</b> 혜택을 받을 수 있어요.<br />요건을 갖춘 상품을 고르면 모은 만큼<br />온전히 내 아이 것이 됩니다.</p>
         </div>
         <div class="card">
@@ -283,7 +284,7 @@
         <div class="card">
           <div class="ic c6">✅</div>
           <h3>금리 방식도 꼼꼼히</h3>
-          <p>시작할 때 정해진 금리로 계획할 수 있는<br /><b>고정금리형</b> 상품을 고르세요.<br />단, 중도 해지 시 환급금이 납입액보다<br />적을 수 있는 점은 꼭 확인하세요.</p>
+          <p>시작할 때 목적자금을 계획할 수 있는<br />아이의 미래를 설계할 수 있는 상품을 고르세요.</p>
         </div>
         <div class="card">
           <div class="ic c7">🛡️</div>
@@ -334,7 +335,7 @@
             <input type="checkbox" id="agree" required />
             <span>[필수] 개인정보 수집·이용 및 제3자 제공에 동의</span>
           </label>
-          <p class="privacy">· 수집항목: 이름, 연락처, 자녀 정보, 거주 지역<br />· 이용목적: 보험 상담 및 자료 안내<br />· 제공받는 자: 담당 설계사(모집종사자)<br />· 보유기간: 상담 목적 달성 후 즉시 파기(관계법령에 해당하는 경우 그 기간)<br />동의를 거부하실 수 있으며, 거부 시 상담 안내가 제한될 수 있습니다.</p>
+          <p class="privacy">· 수집항목: 이름, 연락처, 자녀 정보, 거주 지역<br />· 이용목적: 보험 상담 및 자료 안내<br />· 제공받는 자: 옥영훈 지사장<br />· 보유기간: 상담 목적 달성 후 즉시 파기(관계법령에 해당하는 경우 그 기간)<br />동의를 거부하실 수 있으며, 거부 시 상담 안내가 제한될 수 있습니다.</p>
 
           <button type="submit" class="submit" id="submitBtn">자료 신청하기 🚀</button>
           <div class="form-msg" id="formMsg"></div>
@@ -344,17 +345,18 @@
   </section>
 
   <footer>
-    <div class="fbrand"><span style="color:var(--yellow)">$</span> 달러모으기</div>
-    <div class="fauthor">(주)한국보험금융 · 보험대리점 등록번호<br />[제 2004048143 호]</div>
+    <div class="fbrand"><span class="fcoin">$</span></div>
+    <div class="fauthor">(주)한국보험금융 · 보험대리점 등록번호 [제 2004048143 호]</div>
     <div class="fauthor2">담당 : 옥영훈 지사장 · 설계사 등록번호 [제 20070184120009 호]</div>
     <div class="fauthor3">본 페이지는 특정 보험회사·상품을 지정해 광고하지 않으며, 상담을 통해 여러 보험회사의 상품을 비교·안내해 드립니다.</div>
     <div class="disc">
-      · 본 광고물은 소속사 준법감시인의 심의필 <b>[제0000-0000호]</b>을 받았습니다. (소속사 심의 기준에 따름)<br />
-      · 보험계약 체결 전 해당 상품의 <b>상품설명서 및 약관</b>을 반드시 확인하시기 바랍니다.<br />
-      · 달러(외화) 기준 상품은 <b>환율 변동에 따라 원금손실이 발생할 수 있으며</b>, 예시 금액·수익은 가정치로 <b>장래 수익을 보장하지 않습니다.</b><br />
-      · 저축성보험은 <b>중도 해지 시 해약환급금이 이미 납입한 보험료보다 적을 수 있습니다.</b><br />
-      · 비과세 혜택은 관련 법령상 <b>요건 충족 시</b>에만 적용됩니다.<br />
-      · 보험상품은 예금자보호법에 따라 해약환급금(또는 만기보험금)에 기타지급금을 합산한 금액 기준 <b>1인당 1억원까지(2025.9.1 시행)</b> 보호됩니다. (상품별로 보호 여부·범위가 다를 수 있습니다.)
+      <p class="disc-h">▸ 법령 및 내부통제기준에 따른 광고 관련 절차 준수에 관한 사항 (광고 유효기간 포함)</p>
+      - 본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.<br />
+      - 광고심의필 제00000호 (유효기간 : 2000.00.00 ~ 2000.00.00)
+      <p class="disc-h">▸ 승환계약 주의사항</p>
+      - 보험계약자가 기존 보험계약을 해지하고 새로운 보험계약을 체결하는 과정에서<br />
+      ① 질병이력, 연령증가 등으로 가입이 거절되거나 보험료가 인상 될 수 있습니다.<br />
+      ② 가입 상품에 따라 새로운 면책기간 적용 및 보장제한 등 기타 불이익이 발생할 수 있습니다.
     </div>
   </footer>
 
